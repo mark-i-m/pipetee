@@ -1,5 +1,8 @@
 # `pipetee`
 
+[<img alt="github" src="https://img.shields.io/badge/github-mark-i-m/pipetee-dbb0c4f?style=for-the-badge&labelColor=555555&logo=github" height="20">](https://github.com/mark-i-m/pipetee)
+[<img alt="crates.io" src="https://img.shields.io/crates/v/pipetee.svg?style=for-the-badge&color=fc8d62&logo=rust" height="20">](https://crates.io/crates/pipetee)
+
 A simple, fast, no-dependencies UNIX utility to print the contents of stdin to
 the terminal *and* forward them to stdout at the same time.
 
