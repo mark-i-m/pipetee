@@ -1,12 +1,30 @@
 # `pipetee`
 
-[<img alt="github" src="https://img.shields.io/badge/github-mark-i-m/pipetee-dbb0c4f?style=for-the-badge&labelColor=555555&logo=github" height="20">](https://github.com/mark-i-m/pipetee)
 [<img alt="crates.io" src="https://img.shields.io/crates/v/pipetee.svg?style=for-the-badge&color=fc8d62&logo=rust" height="20">](https://crates.io/crates/pipetee)
 
 A simple, fast, no-dependencies UNIX utility to print the contents of stdin to
 the terminal *and* forward them to stdout at the same time.
 
-Example usage:
+## Install
+
+- Requires `rust 1.65+`.
+- Only works on a \*nix system.
+
+Via cargo:
+
+```sh
+cargo install pipetee
+```
+
+Via repo:
+
+```sh
+git clone github.com/mark-i-m/pipetee
+cd pipetee
+cargo install --path .
+```
+
+## Example usage:
 
 ```sh
 # output from pt will interleave with output from
@@ -59,6 +77,7 @@ no
 
 ```sh
 # look at intermediate results if the final output takes a long time.
+
 $ cat numbers.txt | ./computation-with-incremental-results.py | pt | sort -n | tee output.txt
 # unsorted
 0.0030632556724745847
@@ -71,7 +90,7 @@ $ cat numbers.txt | ./computation-with-incremental-results.py | pt | sort -n | t
 0.028920997961789503
 0.027188567279582024
 0.02568497042514556
-# sorted
+# after a while... sorted
 0.001587923806107082
 0.0018044960059851569
 0.0029520906739906577
@@ -84,7 +103,7 @@ $ cat numbers.txt | ./computation-with-incremental-results.py | pt | sort -n | t
 0.1628663298523446
 ```
 
-*How does it work?*
+## How does it work?
 
 It reads from stdin and writes to both stdout and /dev/tty. Your shell will
 redirect stdout to whatever the next pipe is, but /dev/tty (what stdout
