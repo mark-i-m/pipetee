@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "pt"
+name = "pipetee"
 version = "1.0.0"

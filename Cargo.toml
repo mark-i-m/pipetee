@@ -1,11 +1,15 @@
 [package]
-name = "pt"
+name = "pipetee"
 version = "1.0.0"
 edition = "2021"
 
 description = "A simple, fast, no-dependencies UNIX utility to print the contents of stdin to the terminal *and* forward them to stdout at the same time. Useful for debugging."
 license = "MIT"
 keywords = ["pipe", "tee", "stdout", "redirect", "tty"]
+
+[[bin]]
+name = "pt"
+path = "src/main.rs"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
